@@ -1,5 +1,90 @@
-<html></html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset=""UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página en HTML</title>
 </head>
+<body>
+    <div class="contenedor">
+    <!-- Título principal -->
+    <h1>¡Hola, soy Mauricio y estoy aprendiendo HTML!</h1>
+
+    <!-- Párrafo de texto -->
+    <p>
+        Esta es mi primera página web. 
+        Estoy aprendiendo <strong>HTML</strong> para luego avanzar a otros lenguajes 
+        como <em>CSS</em> y <em>JavaScript</em>.
+    </p>
+
+    <!-- Subtítulo -->
+    <h2>¿Qué cosas quiero aprender?</h2>
+
+    <!-- Lista desordenada -->
+    <ul>
+        <li>Cómo crear títulos y párrafos</li>
+        <li>Cómo hacer listas</li>
+        <li>Cómo agregar enlaces e imágenes</li>
+        <li>Cómo darle estilo con CSS más adelante</li>
+    </ul>
+
+    <!-- Enlace -->
+    <h2>Un enlace de ejemplo</h2>
+    <p>
+        Puedes visitar 
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+            esta guía de HTML
+        </a> 
+        para aprender más.
+    </p>
+
+    <!-- Imagen de ejemplo (puedes cambiar la URL por otra) -->
+    <h2>Una imagen de ejemplo</h2>
+    <img src="https://i.pinimg.com/736x/87/37/93/873793a572d8b9d0e670713d0d2e58c2.jpg" alt="Imagen de ejemplo">
+
+    <!-- Tabla simple -->
+    <h2>Mi progreso de aprendizaje</h2>
+    <table border="1">
+        <tr>
+            <th>Tema</th>
+            <th>Estado</th>
+        </tr>
+        <tr>
+            <td>HTML básico</td>
+            <td>En progreso ✅</td>
+        </tr>
+        <tr>
+            <td>CSS básico</td>
+            <td>Pendiente ⏳</td>
+        </tr>
+        <tr>
+            <td>JavaScript básico</td>
+            <td>Pendiente ⏳</td>
+        </tr>
+    </table>
+
+    <!-- Formulario simple -->
+    <h2>Formulario de práctica</h2>
+    <form>
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí">
+        <br><br>
+
+        <label for="lenguaje">Lenguaje que te interesa:</label>
+        <select id="lenguaje" name="lenguaje">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Creado por Mauricio mientras aprende HTML 😄</p>
+    </footer>
+</body>
+</html>
