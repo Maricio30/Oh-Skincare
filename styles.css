@@ -1,24 +1,24 @@
 /* Fondo general de la página */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #54bcf8;
+    background-color: #8fd5fd;
     margin: 0;
-    padding: 40px 10px;
+    padding: 40px 30px;
 }
 
 /* CONTENEDOR CENTRAL */
 .contenedor {
-    max-width: 800px;              /* Ancho máximo de la caja */
+    max-width: 1000px;              /* Ancho máximo de la caja */
     margin: 0 auto;                /* Centra horizontalmente */
     background-color: #ffffff;     /* Fondo blanco */
-    padding: 30px;                 /* Espacio interno */
-    border-radius: 12px;           /* Esquinas redondeadas */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
+    padding: 40px;                 /* Espacio interno */
+    border-radius: 25px;           /* Esquinas redondeadas */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.288); /* Sombra suave */
 }
 
 /* TITULOS */
 h1 {
-    color: #1a73e8;
+    color: #055ed3;
     text-align: center;       /* Título centrado */
     margin-bottom: 20px;      /* Espacio debajo del título */
 }
