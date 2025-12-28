@@ -1,5 +1,7 @@
 /* HEADER */
 .header{
+    max-width: 1000px;              /* Ancho máximo de la caja */
+    margin: 0 auto;                /* Centra horizontalmente */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -52,8 +54,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 40px 10px;
-
-  background: linear-gradient(-45deg, #2e5094, #1a2a6c, #2c5364, #0b1220);
+  background: linear-gradient(-45deg, #023191, #182e85, #2c58b9, #1b64f5);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
 }
@@ -171,6 +172,133 @@ footer {
     font-size: 14px;
 }
 
+/* MENU DE ARRIBA */
+.hero{
+    max-width: 1000px;              /* Ancho máximo de la caja */
+    margin: 0 auto;                /* Centra horizontalmente */
+   background: linear-gradient(
+    135deg,
+    #2f62c7,
+    #1a2a6c,
+    #5673ad
+  );
+  padding: 60px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+
+.hero-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.hero-title{
+  font-size: 48px;
+  margin: 0 0 12px 0;
+}
+
+.hero-text{
+  font-size: 18px;
+  margin: 0 0 24px 0;
+  color: rgba(255,255,255,0.85);
+}
+
+.hero-actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-primary{
+  background: #1a73e8;
+  color: white;
+}
+
+.btn-primary:hover{
+  filter: brightness(1.1);
+}
+
+.btn-secondary{
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+}
+
+.btn-secondary:hover{
+  border-color: white;
+}
+
+/* Fondo degradado animado */
+body{
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0b1220, #123b8a, #1a73e8, #0b1220);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Capa de efectos */
+.bgfx{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cada orb */
+.orb{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(255,255,255,0));
+  opacity: 0.45;
+  filter: blur(0.2px);
+}
+
+/* ORBITA: un contenedor que rota */
+.o1, .o2, .o3, .o4{
+  animation: orbit 18s linear infinite;
+  transform-origin: center;
+}
+
+/* Posición base (centro) + “radio” del giro */
+.o1{ top: 10%; left: 10%; }
+.o2{ top: 55%; left: 70%; animation-duration: 24s; }
+.o3{ top: 25%; left: 78%; width: 140px; height: 140px; animation-duration: 20s; }
+.o4{ top: 70%; left: 15%; width: 260px; height: 260px; animation-duration: 28s; }
+
+/* Que el contenido quede encima */
+header, main, footer{
+  position: relative;
+  z-index: 1;
+}
+
+/* Animación del degradado */
+@keyframes gradientMove{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+/* Animación de “órbita” (más visible) */
+@keyframes orbit{
+  0%   { transform: translateX(0px) translateY(0px) rotate(0deg); }
+  50%  { transform: translateX(25px) translateY(-15px) rotate(180deg); }
+  100% { transform: translateX(0px) translateY(0px) rotate(360deg); }
+}
+
 /* ANIMACIÓN AL CARGAR LA PÁGINA */
 .contenedor {
     animation: aparecer 0.7s ease-out;
@@ -185,4 +313,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+
+    
 }
