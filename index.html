@@ -1,126 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Quest World</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <section class="bgfx" aria-hidden="true">
-  <span class="orb o1"></span>
-  <span class="orb o2"></span>
-  <span class="orb o3"></span>
-  <span class="orb o4"></span>
-</section>
-<header class="header">
-    <section class="bgfx" aria-hidden="true">
-  <span class="orb o1"></span>
-  <span class="orb o2"></span>
-  <span class="orb o3"></span>
-  <span class="orb o4"></span>
-</section>
-    <nav class="nav">
-        <span class="logo">Mauricio</span>
-        <div class="menu">
-            <a href="#">Inicio</a>
-            <a href="#">Aprender</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Contacto</a>
-        </div>
-    </nav>
-</header>
-<section class="hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">Bienvenidos</h1>
-    <p class="hero-text">Testeando está Página Web</p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OH Skincare</title>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#">Ver Ahora</a>
-      <a class="btn btn-secondary" href="#contenido">Ver contenido</a>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">OH</a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
+        ☰
+      </button>
+
+      <nav id="nav" class="nav">
+        <a class="nav__link" href="faciales.html">Faciales</a>
+        <a class="nav__link" href="corporales.html">Corporales</a>
+        <a class="nav__link" href="promociones.html">Promociones</a>
+        <a class="nav__link" href="productos.html">Productos</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <section class="hero">
+  <div class="container hero__inner">
+    <p class="eyebrow">WE ENHANCE YOUR BEAUTY</p>
+
+    <h1>
+      Realza tu <span class="highlight">belleza natural</span>
+    </h1>
+
+    <p class="lead">
+      Tratamientos estéticos modernos enfocados en resultados reales.
+    </p>
+
+    <a class="btn btn--primary" href="promociones.html">
+      Agenda tu cita
+    </a>
   </div>
 </section>
-    <main id="contenido">
-    <div class="contenedor">
-    <!-- Título principal -->
-    <h1>¡Hola, soy Mauricio y estoy aprendiendo HTML!</h1>
 
-    <!-- Párrafo de texto -->
-    <p>
-        Esta es mi primera página web. 
-        Estoy aprendiendo <strong>HTML</strong> para luego avanzar a otros lenguajes 
-        como <em>CSS</em> y <em>JavaScript</em>.
-    </p>
 
-    <!-- Subtítulo -->
-    <h2>¿Qué cosas quiero aprender?</h2>
 
-    <!-- Lista desordenada -->
-    <ul>
-        <li>Cómo crear títulos y párrafos</li>
-        <li>Cómo hacer listas</li>
-        <li>Cómo agregar enlaces e imágenes</li>
-        <li>Cómo darle estilo con CSS más adelante</li>
-    </ul>
+    <section class="section">
+      <div class="container">
+        <h2>Nuestros servicios</h2>
 
-    <!-- Enlace -->
-    <h2>Un enlace de ejemplo</h2>
-    <p>
-        Puedes visitar 
-        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
-            esta guía de HTML
-        </a> 
-        para aprender más.
-    </p>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Faciales</h3>
+            <p>Tratamientos para luminosidad, limpieza y rejuvenecimiento.</p>
+            <a class="link" href="faciales.html">Ver faciales →</a>
+          </article>
 
-    <!-- Imagen de ejemplo (puedes cambiar la URL por otra) -->
-    <h2>Una imagen de ejemplo</h2>
-    <img src="https://i.pinimg.com/736x/87/37/93/873793a572d8b9d0e670713d0d2e58c2.jpg" alt="Imagen de ejemplo">
-
-    <!-- Tabla simple -->
-    <h2>Mi progreso de aprendizaje</h2>
-    <table border="1">
-        <tr>
-            <th>Tema</th>
-            <th>Estado</th>
-        </tr>
-        <tr>
-            <td>HTML básico</td>
-            <td>En progreso ✅</td>
-        </tr>
-        <tr>
-            <td>CSS básico</td>
-            <td>Pendiente ⏳</td>
-        </tr>
-        <tr>
-            <td>JavaScript básico</td>
-            <td>Pendiente ⏳</td>
-        </tr>
-    </table>
-
-    <!-- Formulario simple -->
-    <h2>Formulario de práctica</h2>
-    <form>
-        <label for="nombre">Tu nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí">
-        <br><br>
-
-        <label for="lenguaje">Lenguaje que te interesa:</label>
-        <select id="lenguaje" name="lenguaje">
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JavaScript</option>
-        </select>
-        <br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>Creado por Mauricio mientras aprende ssHTML 😄</p>
-    </footer>
+          <article class="card">
+            <h3>Corporales</h3>
+            <p>Moldear, tonificar, reafirmar y bienestar general.</p>
+            <a class="link" href="corporales.html">Ver corporales →</a>
+          </article>
         </div>
-</main>
+      </div>
+    </section>
+
+    <section class="section promo">
+      <div class="container">
+        <h2>Promociones por tiempo limitado</h2>
+        <p class="lead">Aquí practicarás cards + botones + (opcional) contador.</p>
+        <a class="btn btn--outline" href="promociones.html">Ver promociones</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Testimonios</h2>
+
+        <div class="grid testimonials">
+          <figure class="card">
+            <blockquote>“Me encantó el trato y el ambiente.”</blockquote>
+            <figcaption>— Cliente</figcaption>
+          </figure>
+
+          <figure class="card">
+            <blockquote>“Resultados visibles, recomendado.”</blockquote>
+            <figcaption>— Cliente</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Contacto · Miraflores, Perú</p>
+      <p class="muted">© Todos los Derechos Reservados</p>
+    </div>
+  </footer>
+
+  <!-- ✅ pon el script al final -->
+  <script src="main.js"></script>
+</body>
 </html>
