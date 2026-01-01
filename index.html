@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
+<a class="wa-float" href="https://wa.me/51999999999" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+  WhatsApp
+</a>
+
 <body>
   <header class="header">
     <div class="container header__inner">
@@ -17,37 +21,117 @@
         ☰
       </button>
 
-      <nav id="nav" class="nav">
-        <a class="nav__link" href="faciales.html">Faciales</a>
-        <a class="nav__link" href="corporales.html">Corporales</a>
-        <a class="nav__link" href="promociones.html">Promociones</a>
-        <a class="nav__link" href="productos.html">Productos</a>
-      </nav>
+   <nav id="nav" class="nav">
+  <a class="nav__link" href="#sobre">Sobre</a>
+  <a class="nav__link" href="#servicios">Servicios</a>
+  <a class="nav__link" href="#promociones">Promociones</a>
+  <a class="nav__link" href="#contacto">Contacto</a>
+</nav>
     </div>
   </header>
 
+<main>
+  <section class="hero"> ... </section>
+
+  <section id="galeria" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Galería</h2>
+        <p class="muted">Desliza para ver más →</p>
+      </div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="-1" type="button">‹</button>
+
+        <div class="carousel" id="galeriaCarousel">
+          <figure class="card carousel__item">
+            <img src="img/galeria1.jpg" alt="Tratamiento 1">
+          </figure>
+          <figure class="card carousel__item">
+            <img src="img/galeria2.jpg" alt="Tratamiento 2">
+          </figure>
+          <figure class="card carousel__item">
+            <img src="img/galeria3.jpg" alt="Tratamiento 3">
+          </figure>
+        </div>
+
+        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="1" type="button">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- resto -->
+</main>
+
+
+<!-- ✅ IMAGEN ARRIBA -->
+
   <main>
     <section class="hero">
-  <div class="container hero__inner">
-    <p class="eyebrow">WE ENHANCE YOUR BEAUTY</p>
+  <div class="container hero__grid">
 
-    <h1>
-      Realza tu <span class="highlight">belleza natural</span>
-    </h1>
+    <div class="hero__content">
+      <p class="eyebrow">WE ENHANCE YOUR BEAUTY</p>
 
-    <p class="lead">
-      Tratamientos estéticos modernos enfocados en resultados reales.
-    </p>
+      <h1>
+        Realza tu <span class="highlight">belleza natural</span>
+      </h1>
 
-    <a class="btn btn--primary" href="promociones.html">
-      Agenda tu cita
-    </a>
+      <p class="lead">
+        Tratamientos estéticos modernos enfocados en resultados reales.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contacto">Agenda tu cita</a>
+        <a class="btn btn--outline" href="#servicios">Ver servicios</a>
+      </div>
+
+      <div class="hero__badges">
+        <span class="badge">✨ Atención personalizada</span>
+        <span class="badge">🧴 Productos premium</span>
+        <span class="badge">🕒 Lun–Sáb</span>
+      </div>
+    </div>
+
+    <div class="hero__media" aria-label="Imagen principal">
+      <!-- Opción A: imagen real -->
+      <img class="hero__img" src="img/hero.jpg" alt="Tratamiento facial en OH Skincare">
+
+      <!-- Opción B: si todavía no tienes imagen, comenta la línea de arriba
+           y descomenta la de abajo
+      -->
+      <!-- <div class="media__placeholder">Imagen hero aquí</div> -->
+    </div>
+
   </div>
 </section>
 
 
+   <section id="sobre" class="section">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2>Sobre OH Skincare</h2>
+          <p class="lead">
+            Somos un espacio dedicado al cuidado facial y corporal con tratamientos modernos,
+            atención personalizada y enfoque en resultados.
+          </p>
 
-    <section class="section">
+          <ul class="checks">
+            <li>Evaluación y recomendación personalizada</li>
+            <li>Protocolos de higiene y seguridad</li>
+            <li>Productos y tecnología de calidad</li>
+          </ul>
+
+          <a class="btn btn--outline" href="faciales.html">Ver tratamientos</a>
+        </div>
+
+        <div class="about__media" aria-label="Imagen de referencia">
+          <div class="media__placeholder">Imagen / video aquí</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
       <div class="container">
         <h2>Nuestros servicios</h2>
 
@@ -67,17 +151,113 @@
       </div>
     </section>
 
-    <section class="section promo">
+<!-- ✅ FINAL IMAGEN -->
+
+    <section id="promociones" class="section promo">
       <div class="container">
-        <h2>Promociones por tiempo limitado</h2>
-        <p class="lead">Aquí practicarás cards + botones + (opcional) contador.</p>
-        <a class="btn btn--outline" href="promociones.html">Ver promociones</a>
+        <div class="section__head">
+          <h2>Promociones</h2>
+          <a class="link" href="promociones.html">Ver todas →</a>
+        </div>
+
+        <div class="grid promo__grid">
+          <article class="card promo__card">
+            <h3>Pack Glow</h3>
+            <p>Limpieza + hidratación para una piel luminosa.</p>
+            <p class="price">S/ 149</p>
+            <a class="btn btn--primary" href="#contacto">Lo quiero</a>
+          </article>
+
+          <article class="card promo__card">
+            <h3>Rejuvenecimiento</h3>
+            <p>Tratamiento enfocado en textura y líneas finas.</p>
+            <p class="price">S/ 199</p>
+            <a class="btn btn--primary" href="#contacto">Lo quiero</a>
+          </article>
+
+          <article class="card promo__card">
+            <h3>2x1 Evaluación</h3>
+            <p>Trae a alguien y obtengan evaluación sin costo.</p>
+            <p class="price">Gratis</p>
+            <a class="btn btn--primary" href="#contacto">Agendar</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+
+
+    
+<section id="antes-despues" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Antes & Después</h2>
+      <p class="muted">Desliza o usa las flechas →</p>
+    </div>
+
+    <div class="carousel-wrap">
+      <button class="carousel-btn" type="button" data-target="adCarousel" data-dir="-1" aria-label="Anterior">‹</button>
+
+      <div class="carousel" id="adCarousel">
+        <!-- Slide 1 -->
+        <article class="card ad__item">
+          <div class="ad__grid">
+            <figure class="ad__shot">
+              <img src="img/ad-1-antes.jpg" alt="Antes - Caso 1">
+              <figcaption class="ad__cap">Antes</figcaption>
+            </figure>
+            <figure class="ad__shot">
+              <img src="img/ad-1-despues.jpg" alt="Después - Caso 1">
+              <figcaption class="ad__cap">Después</figcaption>
+            </figure>
+          </div>
+          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="card ad__item">
+          <div class="ad__grid">
+            <figure class="ad__shot">
+              <img src="img/ad-2-antes.jpg" alt="Antes - Caso 2">
+              <figcaption class="ad__cap">Antes</figcaption>
+            </figure>
+            <figure class="ad__shot">
+              <img src="img/ad-2-despues.jpg" alt="Después - Caso 2">
+              <figcaption class="ad__cap">Después</figcaption>
+            </figure>
+          </div>
+          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="card ad__item">
+          <div class="ad__grid">
+            <figure class="ad__shot">
+              <img src="img/ad-3-antes.jpg" alt="Antes - Caso 3">
+              <figcaption class="ad__cap">Antes</figcaption>
+            </figure>
+            <figure class="ad__shot">
+              <img src="img/ad-3-despues.jpg" alt="Después - Caso 3">
+              <figcaption class="ad__cap">Después</figcaption>
+            </figure>
+          </div>
+          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
+        </article>
+      </div>
+
+      <button class="carousel-btn" type="button" data-target="adCarousel" data-dir="1" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <section id="contacto" class="section">
+
       <div class="container">
-        <h2>Testimonios</h2>
+        <h2>Contacto</h2>
 
         <div class="grid testimonials">
           <figure class="card">
@@ -92,6 +272,30 @@
         </div>
       </div>
     </section>
+
+    <!-- ✅ AHORA DENTRO DE MAIN -->
+   <section id="testimonios" class="section">
+      <div class="container contact__grid">
+        <div class="card contact__card">
+          <h2>Reserva tu cita</h2>
+          <p class="lead">Escríbenos por WhatsApp y te ayudamos a elegir tu tratamiento.</p>
+
+          <div class="contact__info">
+            <p><strong>WhatsApp:</strong> +51 999 999 999</p>
+            <p><strong>Ubicación:</strong> Miraflores, Lima</p>
+            <p><strong>Horario:</strong> Lun–Sáb · 10:00 am – 8:00 pm</p>
+          </div>
+
+          <a class="btn btn--primary" href="https://wa.me/51999999999" target="_blank" rel="noreferrer">
+            Abrir WhatsApp
+          </a>
+        </div>
+
+        <div class="card map">
+          <div class="media__placeholder">Mapa aquí (más adelante)</div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -101,7 +305,6 @@
     </div>
   </footer>
 
-  <!-- ✅ pon el script al final -->
   <script src="main.js"></script>
 </body>
 </html>
