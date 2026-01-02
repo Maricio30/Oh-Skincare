@@ -28,35 +28,42 @@
   <a class="nav__link" href="#contacto">Contacto</a>
 </nav>
     </div>
+    <div class="nav-overlay" hidden></div>
   </header>
 
 <main>
-  <section class="hero"> ... </section>
+  <section class="hero">
+    <!-- tu contenido hero aquí -->
+  </section>
 
   <section id="galeria" class="section">
     <div class="container">
-      <div class="carousel" id="adCarousel" data-autoplay="true">
-      <div class="carousel" id="galeriaCarousel" data-autoplay="true">
+
       <div class="section__head">
+        <h2>Galería</h2>
+        <p class="muted">Desliza para ver más →</p>
       </div>
 
       <div class="carousel-wrap">
-        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="-1" type="button">‹</button>
+        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="-1">‹</button>
 
-        <div class="carousel" id="galeriaCarousel">
+        <div class="carousel" id="galeriaCarousel" data-autoplay="true">
           <figure class="card carousel__item">
             <img src="img/galeria1.jpg" alt="Tratamiento 1">
           </figure>
+
           <figure class="card carousel__item">
             <img src="img/galeria2.jpg" alt="Tratamiento 2">
           </figure>
+
           <figure class="card carousel__item">
             <img src="img/galeria3.jpg" alt="Tratamiento 3">
           </figure>
         </div>
 
-        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="1" type="button">›</button>
+        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="1">›</button>
       </div>
+
     </div>
   </section>
 
@@ -64,12 +71,13 @@
 </main>
 
 
+
+
 <!-- ✅ IMAGEN ARRIBA -->
 
   <main>
-    <section class="hero">
+<section class="hero" id="home">
   <div class="container hero__grid">
-
     <div class="hero__content">
       <p class="eyebrow">WE ENHANCE YOUR BEAUTY</p>
 
@@ -81,7 +89,7 @@
         Tratamientos estéticos modernos enfocados en resultados reales.
       </p>
 
-      <div class="hero__actions">
+      <div class="hero__cta">
         <a class="btn btn--primary" href="#contacto">Agenda tu cita</a>
         <a class="btn btn--outline" href="#servicios">Ver servicios</a>
       </div>
@@ -89,22 +97,17 @@
       <div class="hero__badges">
         <span class="badge">✨ Atención personalizada</span>
         <span class="badge">🧴 Productos premium</span>
-        <span class="badge">🕒 Lun–Sáb</span>
+        <span class="badge">🛡️ Protocolos de higiene</span>
       </div>
     </div>
 
-    <div class="hero__media" aria-label="Imagen principal">
-      <!-- Opción A: imagen real -->
-      <img class="hero__img" src="img/hero.jpg" alt="Tratamiento facial en OH Skincare">
-
-      <!-- Opción B: si todavía no tienes imagen, comenta la línea de arriba
-           y descomenta la de abajo
-      -->
-      <!-- <div class="media__placeholder">Imagen hero aquí</div> -->
-    </div>
-
+    <div class="hero__media">
+      <img src="img/hero.jpg" alt="Tratamiento facial en OH Skincare" />
   </div>
 </section>
+
+
+
 
 
    <section id="sobre" class="section">
@@ -200,7 +203,6 @@
 
       <div class="carousel" id="adCarousel">
         <div class="carousel" id="adCarousel" data-autoplay="true">
-        <div class="carousel" id="galeriaCarousel" data-autoplay="true">
         <!-- Slide 1 -->
         <article class="card ad__item">
           <div class="ad__grid">
