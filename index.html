@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OH Skincare</title>
 
-  <link rel="stylesheet" href="styles.css" />
+ <link rel="stylesheet" href="styles.css">
 </head>
 
 <a class="wa-float" href="https://wa.me/51999999999" target="_blank" rel="noreferrer" aria-label="WhatsApp">
@@ -13,23 +13,40 @@
 </a>
 
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="index.html">OH</a>
+  <header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <!-- Brand -->
+    <a class="brand" href="index.html" aria-label="Ir al inicio">
+      <span class="brand__mark">OH</span>
+      <span class="brand__text">Skincare</span>
+    </a>
 
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
-        ☰
-      </button>
+    <!-- Mobile toggle -->
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-   <nav id="nav" class="nav">
-  <a class="nav__link" href="#sobre">Sobre</a>
-  <a class="nav__link" href="#servicios">Servicios</a>
-  <a class="nav__link" href="#promociones">Promociones</a>
-  <a class="nav__link" href="#contacto">Contacto</a>
-</nav>
-    </div>
-    <div class="nav-overlay" hidden></div>
-  </header>
+    <!-- Nav -->
+    <nav class="nav" id="siteNav" aria-label="Navegación principal">
+      <a class="nav__link" href="#servicios" data-scrollspy="servicios">Servicios</a>
+      <a class="nav__link" href="#antes-despues" data-scrollspy="antes-despues">Antes &amp; Después</a>
+      <a class="nav__link" href="#galeria" data-scrollspy="galeria">Galería</a>
+      <a class="nav__link" href="#faq" data-scrollspy="faq">FAQ</a>
+      <a class="nav__link" href="#contacto" data-scrollspy="contacto">Contacto</a>
+
+      <div class="nav__actions">
+        <a class="btn btn--primary" href="#reservar">Reservar</a>
+        <a class="btn btn--ghost" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- overlay para mobile -->
+  <div class="nav__overlay" id="navOverlay" hidden></div>
+</header>
+
 
 <main>
   <section class="hero">
@@ -73,38 +90,92 @@
 
 
 
+
+
+
+
+
 <!-- ✅ IMAGEN ARRIBA -->
 
   <main>
-<section class="hero" id="home">
+<section class="hero" id="inicio">
   <div class="container hero__grid">
-    <div class="hero__content">
-      <p class="eyebrow">WE ENHANCE YOUR BEAUTY</p>
 
-      <h1>
-        Realza tu <span class="highlight">belleza natural</span>
+    <!-- Texto -->
+    <div class="hero__content">
+      <p class="hero__tag">Skincare • Estética • Bienestar</p>
+
+      <h1 class="hero__title">
+        Piel sana, <span>resultados reales</span>.
       </h1>
 
-      <p class="lead">
-        Tratamientos estéticos modernos enfocados en resultados reales.
+      <p class="hero__subtitle">
+        Tratamientos faciales y corporales con enfoque profesional y personalizado.
+        Agenda tu cita y descubre el cambio.
       </p>
 
       <div class="hero__cta">
-        <a class="btn btn--primary" href="#contacto">Agenda tu cita</a>
-        <a class="btn btn--outline" href="#servicios">Ver servicios</a>
+        <a class="btn btn--primary" href="#reservar">Reservar ahora</a>
+        <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
       </div>
 
-      <div class="hero__badges">
-        <span class="badge">✨ Atención personalizada</span>
-        <span class="badge">🧴 Productos premium</span>
-        <span class="badge">🛡️ Protocolos de higiene</span>
+      <div class="hero__trust">
+        <div class="trust__item">
+          <strong>+100</strong>
+          <span>Clientes felices</span>
+        </div>
+        <div class="trust__item">
+          <strong>4.9/5</strong>
+          <span>Valoración</span>
+        </div>
+        <div class="trust__item">
+          <strong>Atención</strong>
+          <span>Personalizada</span>
+        </div>
       </div>
     </div>
 
+    <!-- Imagen -->
     <div class="hero__media">
-      <img src="img/hero.jpg" alt="Tratamiento facial en OH Skincare" />
+      <img src="img/hero.jpg" alt="Tratamiento skincare" class="hero__img" />
+
+      <div class="hero__card">
+        <p class="hero__cardTitle">Consulta sin costo</p>
+        <p class="hero__cardText">Escríbenos y te guiamos según tu tipo de piel.</p>
+        <a class="hero__cardLink" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+          Hablar por WhatsApp →
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+    <!-- Imagen -->
+    <div class="hero__media">
+      <!-- Cambia esta ruta por tu imagen real -->
+      <img src="img/hero.jpg" alt="Tratamiento skincare" class="hero__img" />
+
+      <div class="hero__card">
+        <p class="hero__cardTitle">Consulta sin costo</p>
+        <p class="hero__cardText">Escríbenos y te guiamos según tu tipo de piel.</p>
+        <a class="hero__cardLink" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+          Hablar por WhatsApp →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 

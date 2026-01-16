@@ -171,3 +171,76 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     .querySelectorAll('.carousel[data-autoplay="true"]')
     .forEach((carousel) => setupLoopAutoplay(carousel, 3200)); // 3200 más elegante
 })();
+
+
+// ============ HEADER: sticky style + menu mobile + scrollspy ============
+(() => {
+  const header = document.getElementById("siteHeader");
+  const nav = document.getElementById("siteNav");
+  const toggle = document.getElementById("navToggle");
+  const overlay = document.getElementById("navOverlay");
+
+  if (!header || !nav || !toggle || !overlay) return;
+
+  // Sticky style on scroll
+  const onScroll = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu open/close
+  const openMenu = () => {
+    nav.classList.add("is-open");
+    overlay.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+  };
+
+  const closeMenu = () => {
+    nav.classList.remove("is-open");
+    overlay.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  toggle.addEventListener("click", () => {
+    nav.classList.contains("is-open") ? closeMenu() : openMenu();
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  // Close menu when click a nav link (mobile)
+  nav.querySelectorAll(".nav__link").forEach((a) => {
+    a.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 900px)").matches) closeMenu();
+    });
+  });
+
+  // Scrollspy: marca link activo según sección visible
+  const links = Array.from(nav.querySelectorAll("[data-scrollspy]"));
+  const sections = links
+    .map((l) => document.getElementById(l.dataset.scrollspy))
+    .filter(Boolean);
+
+  if (sections.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((en) => en.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+
+        links.forEach((l) => {
+          l.classList.toggle("is-active", l.dataset.scrollspy === visible.target.id);
+        });
+      },
+      { root: null, threshold: [0.2, 0.35, 0.5], rootMargin: "-20% 0px -65% 0px" }
+    );
+
+    sections.forEach((s) => io.observe(s));
+  }
+})();
