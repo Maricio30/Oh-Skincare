@@ -1,18 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">OH</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corporales | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
 
-    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
-      ☰
-    </button>
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div>
+          <p class="breadcrumb"><a href="index.html">Inicio</a> / Corporales</p>
+          <h1>Corporales</h1>
+          <p class="muted">Tratamientos corporales para moldear, reafirmar y mejorar tu bienestar.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+              href="https://wa.me/51999999999?text=Hola%20quiero%20informaci%C3%B3n%20de%20Corporales">
+              Reservar por WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="promociones.html">Ver promociones</a>
+          </div>
+        </div>
 
-    <nav id="nav" class="nav">
-      <a class="nav__link" href="faciales.html">Faciales</a>
-      <a class="nav__link" href="corporales.html">Corporales</a>
-      <a class="nav__link" href="promociones.html">Promociones</a>
-      <a class="nav__link" href="productos.html">Productos</a>
-    </nav>
-  </div>
-</header>
+        <div class="page-hero__img">
+          <img src="assets/img/body_1.png" alt="Tratamientos corporales">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="service card">
+            <img class="service__img" src="assets/img/body_1.png" alt="Reductor">
+            <div class="service__body">
+              <h3>Reductor</h3>
+              <p class="muted">Apoya la reducción de medidas y mejora el contorno.</p>
+              <div class="service__bottom">
+                <span class="price">Desde S/ 99.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Reductor">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service card">
+            <img class="service__img" src="assets/img/body_2.png" alt="Reafirmante">
+            <div class="service__body">
+              <h3>Reafirmante</h3>
+              <p class="muted">Mejora la firmeza y apariencia de la piel.</p>
+              <div class="service__bottom">
+                <span class="price">Desde S/ 109.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Reafirmante">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service card">
+            <img class="service__img" src="assets/img/body_3.png" alt="Drenaje linfático">
+            <div class="service__body">
+              <h3>Drenaje Linfático</h3>
+              <p class="muted">Ideal para desinflamar y mejorar circulación.</p>
+              <div class="service__bottom">
+                <span class="price">Desde S/ 119.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Drenaje%20Linf%C3%A1tico">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="card cta">
+          <div>
+            <h2>¿Lista para tu cambio?</h2>
+            <p class="muted">Escríbenos y te recomendamos el tratamiento ideal.</p>
+          </div>
+          <a class="btn btn--primary" target="_blank" rel="noopener"
+             href="https://wa.me/51999999999?text=Hola%20quiero%20asesor%C3%ADa%20corporal">
+            Agendar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooterMount"></div>
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

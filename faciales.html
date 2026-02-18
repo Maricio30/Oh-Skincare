@@ -1,18 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">OH</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faciales | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
 
-    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
-      ☰
-    </button>
+  <div id="siteHeaderMount"></div>
 
-    <nav id="nav" class="nav">
-      <a class="nav__link" href="faciales.html">Faciales</a>
-      <a class="nav__link" href="corporales.html">Corporales</a>
-      <a class="nav__link" href="promociones.html">Promociones</a>
-      <a class="nav__link" href="productos.html">Productos</a>
-    </nav>
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h1>Faciales</h1>
+      <p class="muted">Tratamientos faciales personalizados según tu tipo de piel.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="service card">
+        <img class="service__img" src="assets/img/facial_1.png" alt="Limpieza facial profunda">
+        <div class="service__body">
+          <h3>Limpieza Facial Profunda</h3>
+          <p class="muted">Remueve impurezas, puntos negros y mejora la textura.</p>
+          <div class="service__bottom">
+            <span class="price">Desde S/ 79.00</span>
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Limpieza%20Facial%20Profunda">
+              Reservar
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img class="service__img" src="assets/img/facial_2.png" alt="Hidratación intensiva">
+        <div class="service__body">
+          <h3>Hidratación Intensiva</h3>
+          <p class="muted">Ideal para piel seca o deshidratada. Brillo saludable.</p>
+          <div class="service__bottom">
+            <span class="price">Desde S/ 89.00</span>
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Hidrataci%C3%B3n%20Intensiva">
+              Reservar
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img class="service__img" src="assets/img/facial_3.png" alt="Antiacné">
+        <div class="service__body">
+          <h3>Control Antiacné</h3>
+          <p class="muted">Disminuye brotes y mejora el aspecto de la piel.</p>
+          <div class="service__bottom">
+            <span class="price">Desde S/ 99.00</span>
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://wa.me/51999999999?text=Hola%20quiero%20agendar%20Control%20Antiacn%C3%A9">
+              Reservar
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
-</header>
+</section>
+
+  <div id="siteFooterMount"></div>
+
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -5,381 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OH Skincare</title>
 
- <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
-<a class="wa-float" href="https://wa.me/51999999999" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-  WhatsApp
-</a>
-
 <body>
-  <header class="header" id="siteHeader">
-  <div class="container header__inner">
-    <!-- Brand -->
-    <a class="brand" href="index.html" aria-label="Ir al inicio">
-      <span class="brand__mark">OH</span>
-      <span class="brand__text">Skincare</span>
-    </a>
 
-    <!-- Mobile toggle -->
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <!-- Nav -->
-    <nav class="nav" id="siteNav" aria-label="Navegación principal">
-      <a class="nav__link" href="#servicios" data-scrollspy="servicios">Servicios</a>
-      <a class="nav__link" href="#antes-despues" data-scrollspy="antes-despues">Antes &amp; Después</a>
-      <a class="nav__link" href="#galeria" data-scrollspy="galeria">Galería</a>
-      <a class="nav__link" href="#faq" data-scrollspy="faq">FAQ</a>
-      <a class="nav__link" href="#contacto" data-scrollspy="contacto">Contacto</a>
-
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#reservar">Reservar</a>
-        <a class="btn btn--ghost" href="https://wa.me/51999999999" target="_blank" rel="noopener">
-          WhatsApp
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- overlay para mobile -->
-  <div class="nav__overlay" id="navOverlay" hidden></div>
-</header>
-
-
-<main>
-  <section class="hero">
-    <!-- tu contenido hero aquí -->
-  </section>
-
-  <section id="galeria" class="section">
-    <div class="container">
-
-      <div class="section__head">
-        <h2>Galería</h2>
-        <p class="muted">Desliza para ver más →</p>
-      </div>
-
-      <div class="carousel-wrap">
-        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="-1">‹</button>
-
-        <div class="carousel" id="galeriaCarousel" data-autoplay="true">
-          <figure class="card carousel__item">
-            <img src="img/galeria1.jpg" alt="Tratamiento 1">
-          </figure>
-
-          <figure class="card carousel__item">
-            <img src="img/galeria2.jpg" alt="Tratamiento 2">
-          </figure>
-
-          <figure class="card carousel__item">
-            <img src="img/galeria3.jpg" alt="Tratamiento 3">
-          </figure>
-        </div>
-
-        <button class="carousel-btn" data-target="galeriaCarousel" data-dir="1">›</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- resto -->
-</main>
-
-
-
-
-
-
-
-
-
-<!-- ✅ IMAGEN ARRIBA -->
+  <!-- Header (se inyecta desde partials/header.html) -->
+  <div id="siteHeaderMount"></div>
 
   <main>
-<section class="hero" id="inicio">
-  <div class="container hero__grid">
+    <!-- HERO -->
+    <section class="section">
+  <div class="container">
+    <div class="hero card">
+      <div class="hero__content">
+        <span class="pill">Especialistas en cuidado de la piel</span>
+        <h1>Cuida tu piel con tratamientos personalizados</h1>
+        <p class="muted">
+          Faciales, corporales, promociones y productos seleccionados.
+          Agenda por WhatsApp y te ayudamos a elegir lo ideal para ti.
+        </p>
 
-    <!-- Texto -->
-    <div class="hero__content">
-      <p class="hero__tag">Skincare • Estética • Bienestar</p>
-
-      <h1 class="hero__title">
-        Piel sana, <span>resultados reales</span>.
-      </h1>
-
-      <p class="hero__subtitle">
-        Tratamientos faciales y corporales con enfoque profesional y personalizado.
-        Agenda tu cita y descubre el cambio.
-      </p>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#reservar">Reservar ahora</a>
-        <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
-      </div>
-
-      <div class="hero__trust">
-        <div class="trust__item">
-          <strong>+100</strong>
-          <span>Clientes felices</span>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="faciales.html">Ver Faciales</a>
+          <a class="btn btn--ghost" href="productos.html">Ver Productos</a>
         </div>
-        <div class="trust__item">
-          <strong>4.9/5</strong>
-          <span>Valoración</span>
-        </div>
-        <div class="trust__item">
-          <strong>Atención</strong>
-          <span>Personalizada</span>
+
+        <div class="hero__meta">
+          <div class="meta">
+            <strong>⭐ 4.9</strong>
+            <span class="muted">Opiniones</span>
+          </div>
+          <div class="meta">
+            <strong>+120</strong>
+            <span class="muted">Clientes</span>
+          </div>
+          <div class="meta">
+            <strong>Miraflores</strong>
+            <span class="muted">Perú</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Imagen -->
-    <div class="hero__media">
-      <img src="img/hero.jpg" alt="Tratamiento skincare" class="hero__img" />
-
-      <div class="hero__card">
-        <p class="hero__cardTitle">Consulta sin costo</p>
-        <p class="hero__cardText">Escríbenos y te guiamos según tu tipo de piel.</p>
-        <a class="hero__cardLink" href="https://wa.me/51999999999" target="_blank" rel="noopener">
-          Hablar por WhatsApp →
-        </a>
+      <div class="hero__image">
+        <img src="assets/img/hero.png" alt="OH Skincare - cuidado de la piel" />
       </div>
     </div>
-
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-    <!-- Imagen -->
-    <div class="hero__media">
-      <!-- Cambia esta ruta por tu imagen real -->
-      <img src="img/hero.jpg" alt="Tratamiento skincare" class="hero__img" />
-
-      <div class="hero__card">
-        <p class="hero__cardTitle">Consulta sin costo</p>
-        <p class="hero__cardText">Escríbenos y te guiamos según tu tipo de piel.</p>
-        <a class="hero__cardLink" href="https://wa.me/51999999999" target="_blank" rel="noopener">
-          Hablar por WhatsApp →
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-   <section id="sobre" class="section">
-      <div class="container about__grid">
-        <div class="about__text">
-          <h2>Sobre OH Skincare</h2>
-          <p class="lead">
-            Somos un espacio dedicado al cuidado facial y corporal con tratamientos modernos,
-            atención personalizada y enfoque en resultados.
-          </p>
-
-          <ul class="checks">
-            <li>Evaluación y recomendación personalizada</li>
-            <li>Protocolos de higiene y seguridad</li>
-            <li>Productos y tecnología de calidad</li>
-          </ul>
-
-          <a class="btn btn--outline" href="faciales.html">Ver tratamientos</a>
-        </div>
-
-        <div class="about__media" aria-label="Imagen de referencia">
-          <div class="media__placeholder">Imagen / video aquí</div>
+          <!-- Puedes cambiar esta imagen por una real -->
+          <div class="hero__media" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section id="servicios" class="section">
-      <div class="container">
-        <h2>Nuestros servicios</h2>
-
-        <div class="grid cards">
-          <article class="card">
-            <h3>Faciales</h3>
-            <p>Tratamientos para luminosidad, limpieza y rejuvenecimiento.</p>
-            <a class="link" href="faciales.html">Ver faciales →</a>
-          </article>
-
-          <article class="card">
-            <h3>Corporales</h3>
-            <p>Moldear, tonificar, reafirmar y bienestar general.</p>
-            <a class="link" href="corporales.html">Ver corporales →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<!-- ✅ FINAL IMAGEN -->
-
-    <section id="promociones" class="section promo">
+    <!-- DESTACADOS -->
+    <section class="section section--soft">
       <div class="container">
         <div class="section__head">
-          <h2>Promociones</h2>
-          <a class="link" href="promociones.html">Ver todas →</a>
+          <h2>Lo que ofrecemos</h2>
+          <p class="muted">Servicios pensados para resultados visibles y cuidado continuo.</p>
         </div>
 
-        <div class="grid promo__grid">
-          <article class="card promo__card">
-            <h3>Pack Glow</h3>
-            <p>Limpieza + hidratación para una piel luminosa.</p>
-            <p class="price">S/ 149</p>
-            <a class="btn btn--primary" href="#contacto">Lo quiero</a>
+        <div class="grid grid-3">
+          <article class="card card-pad">
+            <h3 class="card__title">Faciales</h3>
+            <p class="muted">Limpieza profunda, hidratación, antiacné, antiage y más.</p>
+            <a class="btn btn--ghost" href="faciales.html">Ver faciales →</a>
           </article>
 
-          <article class="card promo__card">
-            <h3>Rejuvenecimiento</h3>
-            <p>Tratamiento enfocado en textura y líneas finas.</p>
-            <p class="price">S/ 199</p>
-            <a class="btn btn--primary" href="#contacto">Lo quiero</a>
+          <article class="card card-pad">
+            <h3 class="card__title">Corporales</h3>
+            <p class="muted">Tratamientos reductores, reafirmantes y drenajes.</p>
+            <a class="btn btn--ghost" href="corporales.html">Ver corporales →</a>
           </article>
 
-          <article class="card promo__card">
-            <h3>2x1 Evaluación</h3>
-            <p>Trae a alguien y obtengan evaluación sin costo.</p>
-            <p class="price">Gratis</p>
-            <a class="btn btn--primary" href="#contacto">Agendar</a>
+          <article class="card card-pad">
+            <h3 class="card__title">Promociones</h3>
+            <p class="muted">Paquetes y descuentos por temporada.</p>
+            <a class="btn btn--ghost" href="promociones.html">Ver promos →</a>
           </article>
         </div>
       </div>
     </section>
 
-
-
-    
-<section id="antes-despues" class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Antes & Después</h2>
-      <p class="muted">Desliza o usa las flechas →</p>
-    </div>
-
-    <div class="carousel-wrap">
-      <button class="carousel-btn" type="button" data-target="adCarousel" data-dir="-1" aria-label="Anterior">‹</button>
-
-      <div class="carousel" id="adCarousel">
-        <div class="carousel" id="adCarousel" data-autoplay="true">
-        <!-- Slide 1 -->
-        <article class="card ad__item">
-          <div class="ad__grid">
-            <figure class="ad__shot">
-              <img src="img/ad-1-antes.jpg" alt="Antes - Caso 1">
-              <figcaption class="ad__cap">Antes</figcaption>
-            </figure>
-            <figure class="ad__shot">
-              <img src="img/ad-1-despues.jpg" alt="Después - Caso 1">
-              <figcaption class="ad__cap">Después</figcaption>
-            </figure>
-          </div>
-          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
-        </article>
-
-        <!-- Slide 2 -->
-        <article class="card ad__item">
-          <div class="ad__grid">
-            <figure class="ad__shot">
-              <img src="img/ad-2-antes.jpg" alt="Antes - Caso 2">
-              <figcaption class="ad__cap">Antes</figcaption>
-            </figure>
-            <figure class="ad__shot">
-              <img src="img/ad-2-despues.jpg" alt="Después - Caso 2">
-              <figcaption class="ad__cap">Después</figcaption>
-            </figure>
-          </div>
-          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
-        </article>
-
-        <!-- Slide 3 -->
-        <article class="card ad__item">
-          <div class="ad__grid">
-            <figure class="ad__shot">
-              <img src="img/ad-3-antes.jpg" alt="Antes - Caso 3">
-              <figcaption class="ad__cap">Antes</figcaption>
-            </figure>
-            <figure class="ad__shot">
-              <img src="img/ad-3-despues.jpg" alt="Después - Caso 3">
-              <figcaption class="ad__cap">Después</figcaption>
-            </figure>
-          </div>
-          <p class="muted ad__note">Resultados pueden variar según cada persona.</p>
-        </article>
-      </div>
-
-      <button class="carousel-btn" type="button" data-target="adCarousel" data-dir="1" aria-label="Siguiente">›</button>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-    <section id="contacto" class="section">
-
+    <!-- GALERÍA (opcional / ejemplo) -->
+    <section class="section">
       <div class="container">
-        <h2>Contacto</h2>
+        <div class="section__head section__head--row">
+          <h2>Galería</h2>
+          <p class="muted">Desliza para ver más →</p>
+        </div>
 
-        <div class="grid testimonials">
-          <figure class="card">
-            <blockquote>“Me encantó el trato y el ambiente.”</blockquote>
-            <figcaption>— Cliente</figcaption>
-          </figure>
+        <div class="gallery">
+          <article class="card gallery__item">
+            <div class="gallery__ph" aria-hidden="true"></div>
+            <div class="card-pad">
+              <h3 class="card__title">Tratamiento 1</h3>
+              <p class="muted">Descripción corta del tratamiento o resultado.</p>
+            </div>
+          </article>
 
-          <figure class="card">
-            <blockquote>“Resultados visibles, recomendado.”</blockquote>
-            <figcaption>— Cliente</figcaption>
-          </figure>
+          <article class="card gallery__item">
+            <div class="gallery__ph" aria-hidden="true"></div>
+            <div class="card-pad">
+              <h3 class="card__title">Tratamiento 2</h3>
+              <p class="muted">Descripción corta del tratamiento o resultado.</p>
+            </div>
+          </article>
+
+          <article class="card gallery__item">
+            <div class="gallery__ph" aria-hidden="true"></div>
+            <div class="card-pad">
+              <h3 class="card__title">Tratamiento 3</h3>
+              <p class="muted">Descripción corta del tratamiento o resultado.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ✅ AHORA DENTRO DE MAIN -->
-   <section id="testimonios" class="section">
-      <div class="container contact__grid">
-        <div class="card contact__card">
-          <h2>Reserva tu cita</h2>
-          <p class="lead">Escríbenos por WhatsApp y te ayudamos a elegir tu tratamiento.</p>
-
-          <div class="contact__info">
-            <p><strong>WhatsApp:</strong> +51 999 999 999</p>
-            <p><strong>Ubicación:</strong> Miraflores, Lima</p>
-            <p><strong>Horario:</strong> Lun–Sáb · 10:00 am – 8:00 pm</p>
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="container">
+        <div class="card cta">
+          <div>
+            <h2>¿Lista para agendar?</h2>
+            <p class="muted">Escríbenos por WhatsApp y te ayudamos a elegir el tratamiento ideal.</p>
           </div>
-
-          <a class="btn btn--primary" href="https://wa.me/51999999999" target="_blank" rel="noreferrer">
-            Abrir WhatsApp
+          <a class="btn btn--primary" target="_blank" rel="noopener"
+             href="https://wa.me/51999999999?text=Hola%20quiero%20informaci%C3%B3n">
+            Agendar por WhatsApp
           </a>
-        </div>
-
-        <div class="card map">
-          <div class="media__placeholder">Mapa aquí (más adelante)</div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>Contacto · Miraflores, Perú</p>
-      <p class="muted">© Todos los Derechos Reservados</p>
-    </div>
-  </footer>
+  <!-- Footer (se inyecta desde partials/footer.html) -->
+  <div id="siteFooterMount"></div>
 
-  <script src="main.js"></script>
+  <!-- Scripts -->
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

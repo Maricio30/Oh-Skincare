@@ -1,18 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">OH</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promociones | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
 
-    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
-      ☰
-    </button>
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div>
+          <p class="breadcrumb"><a href="index.html">Inicio</a> / Promociones</p>
+          <h1>Promociones</h1>
+          <p class="muted">Paquetes y descuentos por temporada. Reserva por WhatsApp.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+              href="https://wa.me/51999999999?text=Hola%20quiero%20ver%20promociones">
+              Consultar promos
+            </a>
+            <a class="btn btn--ghost" href="productos.html">Ver productos</a>
+          </div>
+        </div>
 
-    <nav id="nav" class="nav">
-      <a class="nav__link" href="faciales.html">Faciales</a>
-      <a class="nav__link" href="corporales.html">Corporales</a>
-      <a class="nav__link" href="promociones.html">Promociones</a>
-      <a class="nav__link" href="productos.html">Productos</a>
-    </nav>
-  </div>
-</header>
+        <div class="page-hero__img">
+          <img src="assets/img/promo_1.png" alt="Promociones OH Skincare">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="service card">
+            <img class="service__img" src="assets/img/promo_1.png" alt="Promo facial">
+            <div class="service__body">
+              <h3>Promo Facial</h3>
+              <p class="muted">Limpieza + hidratación. Perfecto para empezar.</p>
+              <div class="service__bottom">
+                <span class="price">S/ 129.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20la%20Promo%20Facial">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service card">
+            <img class="service__img" src="assets/img/promo_2.png" alt="Promo corporal">
+            <div class="service__body">
+              <h3>Promo Corporal</h3>
+              <p class="muted">Paquete reductor + reafirmante.</p>
+              <div class="service__bottom">
+                <span class="price">S/ 199.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20la%20Promo%20Corporal">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service card">
+            <img class="service__img" src="assets/img/promo_3.png" alt="Promo glow">
+            <div class="service__body">
+              <h3>Promo Glow</h3>
+              <p class="muted">Rutina completa para una piel luminosa.</p>
+              <div class="service__bottom">
+                <span class="price">S/ 159.00</span>
+                <a class="btn btn--primary" target="_blank" rel="noopener"
+                   href="https://wa.me/51999999999?text=Hola%20quiero%20la%20Promo%20Glow">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooterMount"></div>
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

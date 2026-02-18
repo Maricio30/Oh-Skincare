@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="siteHeaderMount"></div>
+
+  <main class="section">
+    <div class="container">
+      <h1>Carrito</h1>
+
+      <div id="cartWrap"></div>
+
+      <div class="cart-summary">
+        <p><strong>Total:</strong> <span id="cartTotal">S/ 0.00</span></p>
+        <a class="btn btn--primary" href="checkout.html">Ir a checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="siteFooterMount"></div>
+
+  <script src="js/include.js"></script>
+  <script type="module">
+    import { getCart, setQty, removeFromCart, cartTotal } from "./assets/js/cart.js";
+
+    const wrap = document.getElementById("cartWrap");
+    const totalEl = document.getElementById("cartTotal");
+
+    const formatPEN = n => "S/ " + n.toFixed(2);
+
+    function render() {
+      const cart = getCart();
+      totalEl.textContent = formatPEN(cartTotal());
+
+      if (cart.length === 0) {
+        wrap.innerHTML = `<p class="muted">Tu carrito está vacío. <a href="productos.html">Ver productos</a></p>`;
+        return;
+      }
+
+      wrap.innerHTML = cart.map(i => `
+        <div class="card cart-item">
+          <img src="${i.img}" alt="${i.name}" class="cart-item__img">
+          <div class="cart-item__info">
+            <h3>${i.name}</h3>
+            <p>${formatPEN(i.price)}</p>
+            <label>Cantidad:
+              <input type="number" min="1" value="${i.qty}" data-qty="${i.id}">
+            </label>
+            <button class="btn btn--ghost" data-remove="${i.id}">Quitar</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    wrap.addEventListener("input", (e) => {
+      const input = e.target.closest("[data-qty]");
+      if (!input) return;
+      const id = input.getAttribute("data-qty");
+      const qty = Math.max(1, Number(input.value || 1));
+      setQty(id, qty);
+      totalEl.textContent = formatPEN(cartTotal());
+    });
+
+    wrap.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-remove]");
+      if (!btn) return;
+      removeFromCart(btn.getAttribute("data-remove"));
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>

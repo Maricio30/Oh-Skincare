@@ -1,18 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">OH</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
 
-    <button class="nav__toggle" aria-expanded="false" aria-controls="nav">
-      ☰
-    </button>
+  <div id="siteHeaderMount"></div>
 
-    <nav id="nav" class="nav">
-      <a class="nav__link" href="faciales.html">Faciales</a>
-      <a class="nav__link" href="corporales.html">Corporales</a>
-      <a class="nav__link" href="promociones.html">Promociones</a>
-      <a class="nav__link" href="productos.html">Productos</a>
-    </nav>
+<main class="section">
+  <div class="container">
+    <div class="section__head">
+      <h1>Productos</h1>
+      <p class="muted">Filtra y agrega productos al carrito.</p>
+    </div>
+
+    <div class="filters card card-pad">
+      <div class="filters__row">
+        <label class="field">
+          <span class="field__label">Buscar</span>
+          <input id="q" type="search" placeholder="Ej: Serum, protector..." />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Categoría</span>
+          <select id="cat"></select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Precio máximo: <strong id="priceLabel"></strong></span>
+          <input id="price" type="range" min="0" max="200" value="200" />
+        </label>
+
+        <button class="btn btn--ghost" id="clearFilters" type="button">Limpiar</button>
+      </div>
+    </div>
+
+    <div class="grid grid-3" id="productsGrid"></div>
   </div>
-</header>
+</main>
+
+
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/products.js"></script>
+</body>
+</html>
