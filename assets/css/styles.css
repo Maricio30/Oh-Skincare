@@ -729,3 +729,36 @@ input[type="search"], input[type="text"], select, input[type="range"], textarea{
 @media (max-width: 900px){
   .page-hero__inner{ grid-template-columns: 1fr; }
 }
+
+
+/* ===============================
+   Mobile menu fixes (final overrides)
+   =============================== */
+@media (max-width: 900px){
+  .nav__toggle{
+    display: inline-flex !important;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .nav__toggle span{
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 999px;
+  }
+
+  /* overlay arriba del contenido */
+  .nav__overlay{
+    z-index: 55 !important;
+  }
+
+  /* menú arriba del overlay */
+  .nav{
+    z-index: 60 !important;
+  }
+}
