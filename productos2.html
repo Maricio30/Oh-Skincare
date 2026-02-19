@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto | OH Skincare</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="siteHeaderMount"></div>
+
+  <main class="section">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / <span id="crumbName">Producto</span></p>
+
+      <div id="productDetail"></div>
+
+      <section class="section" style="padding-top:22px;">
+        <div class="section__head section__head--row">
+          <div>
+            <h2>Productos relacionados</h2>
+            <p class="muted">Opciones similares que te pueden gustar.</p>
+          </div>
+          <a class="btn btn--ghost" href="productos.html">Ver todos →</a>
+        </div>
+
+        <div class="grid grid-3" id="relatedGrid"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="siteFooterMount"></div>
+
+  <script src="js/include.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/product-detail.js"></script>
+</body>
+</html>

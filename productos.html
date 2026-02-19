@@ -34,6 +34,17 @@
           <input id="price" type="range" min="0" max="200" value="200" />
         </label>
 
+        <label class="field">
+  <span class="field__label">Ordenar</span>
+  <select id="sort">
+    <option value="reco">Recomendados</option>
+    <option value="price-asc">Precio: menor a mayor</option>
+    <option value="price-desc">Precio: mayor a menor</option>
+    <option value="name-asc">Nombre: A → Z</option>
+    <option value="name-desc">Nombre: Z → A</option>
+  </select>
+</label>
+
         <button class="btn btn--ghost" id="clearFilters" type="button">Limpiar</button>
       </div>
     </div>

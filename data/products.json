@@ -8,3 +8,15 @@
   { "id":"p7","name":"Crema Antiage","price":99,"category":"Cremas","img":"assets/img/prod_7.png" },
   { "id":"p8","name":"Exfoliante Suave","price":52,"category":"Exfoliantes","img":"assets/img/prod_8.png" }
 ]
+
+{
+  "id":"p1",
+  "name":"Serum Vitamina C",
+  "price":79,
+  "category":"Serums",
+  "img":"assets/img/prod_1.png",
+  "description":"Serum antioxidante para iluminar y mejorar la apariencia de la piel.",
+  "size":"30 ml",
+  "usage":"Usar por la mañana. Aplicar 2–3 gotas antes de la crema.",
+  "benefits":["Ilumina","Antioxidante","Mejora textura"]
+}
